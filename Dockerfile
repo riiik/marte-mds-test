@@ -8,6 +8,10 @@ RUN yum -y install epel-release
 RUN yum -y install python-pip
 RUN pip install numpy==1.16
 
+# for plotting...
+RUN yum install libcanberra-gtk*
+RUN yum install python-matplotlib
+
 RUN useradd -ms /bin/bash xtermuser
 RUN echo 'Docker!' | passwd --stdin root
 RUN echo 'Docker!' | passwd --stdin xtermuser
