@@ -27,6 +27,5 @@ CMD /bin/bash
 ## invocation (where the last 'docker' is the name of the directory containing the Dockerfile):
 
 # docker build -t x1 docker
-# docker run --rm -it -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.ssh:/home/xtermuser/.ssh/:ro -v ~/.ssh:/root/.ssh/:ro --network host --name x1.1 x1
-# docker exec -it -user root x1 bash
-
+# docker run --rm -it -e DISPLAY=${DISPLAY} -e marte_mds_path=/opt/MARTe2/Projects/MARTe2-utils/MARTe2-demos-sigtools/Trees -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.ssh:/home/xtermuser/.ssh/:ro -v ~/.ssh:/root/.ssh/:ro --network host --name x1.1 x1
+# docker exec -it -e marte_mds_path=/opt/MARTe2/Projects/MARTe2-utils/MARTe2-demos-sigtools/Trees --user root x1.1 bash
